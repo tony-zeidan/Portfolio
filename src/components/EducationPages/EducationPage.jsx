@@ -196,7 +196,7 @@ const EducationPage = () => {
               </td>
             </tr>
             <tr>
-            <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
                 ECOR 2050
               </td>
               <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -206,12 +206,242 @@ const EducationPage = () => {
                 A
               </td>
             </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ELEC 2501
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Circuits and Signals
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                MATH 2004
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Multivariable Calculus for Eng. Students
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 2004
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Object-Oriented Software Development
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 2006
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Foundations of Imperative Programming
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 2100
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Algorithms and Data Structures
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 2310
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Introduction to Digital Signatures
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 2320
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Computer Organization and Architecture
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
             <tr className="border-b border-t" colspan='3'>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-bold">Level Three Courses:</td>
             </tr>
-
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                COMP 3005
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Database Management Systems
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ECOR 3800
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Engineering Economics
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 3101
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Programming Languages
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A-
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ECOR 3110
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Design Project
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ECOR 3310
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Introduction to Real-time Systems
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A-
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 3600
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Systems and Simulation
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 3303
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Real-time Concurrent Systems
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ECOR 3120
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Requirements Engineering
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
             <tr className="border-b border-t" colspan='3'>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-bold">Level Four Courses:</td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ECOR 4995
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Professional Practice
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A-
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                ELEC 4705
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Electronic Devices, Materials, and Transmission Media
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4001
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Operating Systems
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A-
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4101
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Validation
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4106
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Economy and Project Management
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A+
+              </td>
+            </tr>
+            <tr className='border-b'>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4810
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Introduction to Network and Software Security
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                A
+              </td>
             </tr>
           </tbody>
         </table>
