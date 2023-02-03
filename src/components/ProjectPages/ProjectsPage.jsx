@@ -7,7 +7,7 @@ import ruby from '../../assets/ruby.png';
 import sapphire from '../../assets/sapphire.png';
 import elevator from '../../assets/elevator.png';
 import risk from '../../assets/risk.png';
-import {FaGithub} from "react-icons/fa";
+import {FaGithub, FaJournalWhills} from "react-icons/fa";
 import Navbar from "../Navbar";
 
 const ProjectsPage = () => {
@@ -38,6 +38,15 @@ const ProjectsPage = () => {
                         <div className='mb-5'>
                             <a href="https://github.com/mrempel/geohexviz ">
                                 <FaGithub size={30}/>
+                                Repository
+                            </a>
+                            <a href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
+                                <FaJournalWhills size={30}/>
+                                Journal
+                            </a>
+                            <a href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
+                                <FaJournalWhills size={30}/>
+                                Reference Document`
                             </a>
                             <p className='mt-2'>This is one of the projects I'm most proud of. Meet GeoHexViz!</p>
                         </div>
