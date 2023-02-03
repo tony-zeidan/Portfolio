@@ -35,21 +35,22 @@ const ProjectsPage = () => {
                                 GeoHexViz
                             </p>
                         </div>
-                        <div className='mb-5'>
-                            <a href="https://github.com/mrempel/geohexviz ">
+                        <div className='mb-5 flex flex-row'>
+                            <a className='mr-5' href="https://github.com/mrempel/geohexviz">
                                 <FaGithub size={30}/>
                                 Repository
                             </a>
-                            <a href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
+                            <a className='mr-5' href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
                                 <FaJournalWhills size={30}/>
                                 Journal
                             </a>
-                            <a href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
+                            <a href="https://cradpdf.drdc-rddc.gc.ca/PDFS/unc381/p814091_A1b.pdf">
                                 <FaJournalWhills size={30}/>
-                                Reference Document`
+                                Reference Document
                             </a>
-                            <p className='mt-2'>This is one of the projects I'm most proud of. Meet GeoHexViz!</p>
+
                         </div>
+                        <p className='mt-2 mb-5'>This is one of the projects I'm most proud of. Meet GeoHexViz!</p>
                         <div
                             style={{backgroundImage: `url(${ghv})`}}
                             className='shadow-lg shadow-[#040c16] w-96 h-96 bg-contain group container rounded-md flex justify-center items-center mx-auto'
