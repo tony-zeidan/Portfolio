@@ -21,7 +21,7 @@ const EducationPage = () => {
                             <p>Program: <em>Software Engineering</em></p>
                             <p>Degree: <em>Bachelors of Engineering (B.Eng)</em></p>
                             <p>CGPA: <em>11.30 / 12</em></p>
-                            <p className='mt-2'>I studied for a total of 4 years at Carleton University. </p>
+                            <p className='mt-2'>I studied for a total of 4 years and did 1 year of co-op at Carleton University. </p>
                         
 <div class="flex flex-col text-gray-300">
   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
