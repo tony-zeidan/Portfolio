@@ -412,6 +412,17 @@ const EducationPage = () => {
             </tr>
             <tr>
               <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4005
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Discrete Simulation/Modeling
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                In Progress
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
                 SYSC 4101
               </td>
               <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
@@ -430,6 +441,50 @@ const EducationPage = () => {
               </td>
               <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
                 A+
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4120
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Architecture and Design
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                In Progress
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4415
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Introduction to Machine Learning
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                In Progress
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4504
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Introduction to Web Development
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                In Progress
+              </td>
+            </tr>
+            <tr>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                SYSC 4806
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+              Software Laboratory
+              </td>
+              <td className="text-sm font-light px-6 py-4 whitespace-nowrap">
+                In Progress
               </td>
             </tr>
             <tr className='border-b'>
