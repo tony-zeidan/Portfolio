@@ -42,6 +42,8 @@ const TicTacToe = () => {
       if (calculateWinner(newBoard)) {
         alert(`${currTurn} wins the match!`);
         newBoard.fill(null);
+        setLastMoves([]);
+        setTurn('X');
       } else {
         setTurn(newTurn);
         setLastMoves([...lastMoves, sq]);
