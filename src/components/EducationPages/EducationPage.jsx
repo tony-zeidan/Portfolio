@@ -20,8 +20,9 @@ const EducationPage = () => {
                         <div className='mb-5 mt-5'>
                             <p>Program: <em>Software Engineering</em></p>
                             <p>Degree: <em>Bachelors of Engineering (B.Eng)</em></p>
+                            <p>CGPA: <em>11.30 / 12</em></p>
                             <p className='mt-2'>I studied for a total of 4 years at Carleton University. </p>
-                            HTML
+                        
 <div class="flex flex-col text-gray-300">
   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
