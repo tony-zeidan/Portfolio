@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, {useState, useEffect, useMemo, useRef} from 'react';
 
-function Riddle1(props) {
+function Riddle2(props) {
 
     const [currGuess, setCurrGuess] = useState("");
 
@@ -13,17 +13,21 @@ function Riddle1(props) {
                 "Thankfully, the hacker has left behind some clues as to the algorithm he used to calculate " +
                 "your new password! Unfortunately the algorithm is bound to some sort of name... " +
                 "Figure out the password.");
-        }, [props.info]
+        }
     )
 
+    const firstUpdate = useRef(true);
     useEffect(() => {
-        console.log(props.guessTo);
-        if (props.guessTo === ANSWER) {
-            alert("Success!");
-            props.onAttempt(true);
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+            console.log("HERE");
             return;
         }
-        props.onAttempt(false);
+        if (props.guessTo === ANSWER) {
+            alert("Success!");
+            return;
+        }
+        props.onAttempt();
         }, [props.guessTo]);
 
     return (
@@ -57,4 +61,4 @@ function Riddle1(props) {
         </div>
     );
 }
-export default Riddle1;
+export default Riddle2;
