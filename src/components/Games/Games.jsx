@@ -7,6 +7,7 @@ import elevator from '../../assets/elevator.png';
 import risk from '../../assets/risk.png';
 import Project from '../ProjectsShort/Project';
 import TicTacToe from "./TicTacToe/TicTacToe";
+import DungeonRunner from './DungeonRunner/DungeonRunner';
 
 const Games = () => {
     return (
@@ -18,7 +19,12 @@ const Games = () => {
                     </p>
                     <p className='py-6 text-2xl'>Play some games while you are here!</p>
                 </div>
-                <TicTacToe id='tictactoe'/>
+                <div className="mb-5">
+                    <TicTacToe id='tictactoe'/>
+                </div>
+                <div className="mb-5">
+                    <DungeonRunner id='dungeonrunner'/>
+                </div>
             </div>
         </div>
     );
