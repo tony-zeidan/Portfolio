@@ -2,19 +2,23 @@ import React, { useState } from "react";
 
 const DungeonRunner = () => {
 
-  const [currRoom, setCurrRoom] = useState("spawn");
-  const [currMove, setCurrMove] = useState(null);
-  const [alive, setAlive] = useState(true);
-
   const roomMapping = {
     spawn: {
       exits: {
         north: "hallway1",
-        south: "room5",
+        south: "hallway3",
         east: "hallway2",
+        west: "hallway7",
       },
       name: "Spawn",
       info: "There is nothing in here..."
+    },
+    admin: {
+      exits: {
+        east: "hallway7",
+      },
+      name: "Administrative Desk",
+      info: "Nobody is at the front-desk...",
     },
     hallway1: {
       exits: {
@@ -32,14 +36,69 @@ const DungeonRunner = () => {
       name: "Hallway",
       info: "You see a door at the end..."
     },
+    hallway3: {
+      exits: {
+        north: "spawn",
+        south: "hallway4"
+      },
+      name: "Hallway",
+      info: "You see a door at the end...",
+    },
+    hallway4: {
+      exits: {
+        north: "hallway3",
+        south: "hallway5"
+      },
+      name: "Hallway",
+      info: "This looks like a long hallway...",
+    },
+    hallway5: {
+      exits: {
+        north: "hallway4",
+        south: "hallway6"
+      },
+      name: "Hallway",
+      info: "Is this hallway ever going to end?",
+    },
+    hallway6: {
+      exits: {
+        north: "spawn",
+        south: "nothing"
+      },
+      name: "Hallway",
+      info: "I think I can see something past that door...",
+    },
+    nothing: {
+      exits: {
+        north: "hallway6",
+      },
+      name: "Void",
+      info: "Nothingness...",
+    },
+    hallway7: {
+      exits: {
+        east: "spawn",
+        west: "admin",
+      },
+      name: "Hallway",
+      info: "You see a door at the end...",
+    },
     courtyard: {
       exits: {
         west: "hallway2",
         north: "lecturehall",
+        east: "graveyard",
         south: "studio",
       },
       name: "Courtyard",
       info: "There seems to be a lot to do here..."
+    },
+    graveyard: {
+      exits: {
+        west: "courtyard",
+      },
+      name: "Graveyard",
+      info: "A little more populated then usual...",
     },
     lecturehall: {
       exits: {
@@ -64,10 +123,14 @@ const DungeonRunner = () => {
     }
   }
 
+  const [currRoom, setCurrRoom] = useState(roomMapping['spawn']);
+  const [alive, setAlive] = useState(true);
+
   const getCurrRoom = () => {
 
-    let room = roomMapping[currRoom];
-    let exits = Object.keys(room.exits);
+    console.log(currRoom)
+
+    let exits = Object.keys(currRoom.exits);
 
     return (
       <div className="px-6 py-4">
@@ -75,10 +138,10 @@ const DungeonRunner = () => {
       {alive ? (
         <div>
           <p className="text-gray-300 text-medium">
-          {`You have found yourself in the ${room.name}.`}
+          {`You have found yourself in the ${currRoom.name}.`}
           </p>
           <p className="text-gray-400 text-base">
-              {room.info}
+              {currRoom.info}
           </p>
           <p className="text-gray-400 text-base">
             {`You have exits to the ${exits}.`}
@@ -97,28 +160,33 @@ const DungeonRunner = () => {
 
   const handleReset = (e) => {
     e.preventDefault();
-    setCurrRoom("spawn");
+    setCurrRoom(roomMapping['spawn']);
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let room = roomMapping[currRoom];
-    console.log(currMove);
-    console.log(room.exits);
-    console.log(currMove in room.exits)
-    if (currMove in room.exits) {
-      setCurrRoom(room.exits[currMove]);
+  const handleSubmit = (dir) => {
+    if (dir in currRoom.exits) {
+      setCurrRoom(roomMapping[currRoom.exits[dir]]);
     } else {
       alert("There is no exit that way!");
     }
   }
 
+  const getMoveButtons = () => {
+    return (
+      <div>
+        {("north" in currRoom.exits) ? (<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={()=>{handleSubmit("north")}}>North</span>): (<></>)}
+        {("south" in currRoom.exits) ? (<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={()=>{handleSubmit("south")}}>South</span>): (<></>)}
+        {("east" in currRoom.exits) ? (<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={()=>{handleSubmit("east")}}>East</span>): (<></>)}
+        {("west" in currRoom.exits) ? (<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={()=>{handleSubmit("west")}}>West</span>): (<></>)}
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full rounded overflow-hidden shadow-lg">
     {getCurrRoom()}
-    
     <div className="px-6 pt-4 pb-2">
-    <input className="inline-block bg-gray-200 rounded-full px-3 py-1 text-md font-semibold text-gray-700 mr-2 mb-2" type='text' value={currMove} onChange={(e)=>{setCurrMove(e.target.value)}}/>
+      {getMoveButtons()}
       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={handleSubmit}>Submit</span>
       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={handleReset}>Reset</span>
     </div>
