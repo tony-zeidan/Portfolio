@@ -1,13 +1,7 @@
 import React from 'react';
-import ghv from '../../assets/ghv.png';
-import evase from '../../assets/evase.png';
-import ruby from '../../assets/ruby.png';
-import sapphire from '../../assets/sapphire.png';
-import elevator from '../../assets/elevator.png';
-import risk from '../../assets/risk.png';
-import Project from '../ProjectsShort/Project';
 import TicTacToe from "./TicTacToe/TicTacToe";
 import DungeonRunner from './DungeonRunner/DungeonRunner';
+import Riddles from './EscapeRoom/Riddles';
 
 const Games = () => {
     return (
@@ -19,11 +13,14 @@ const Games = () => {
                     </p>
                     <p className='py-6 text-2xl'>Play some games while you are here!</p>
                 </div>
-                <div className="mb-5">
-                    <TicTacToe id='tictactoe'/>
+                <div className="mb-5" id="tictactoe">
+                    <TicTacToe />
                 </div>
-                <div className="mb-5">
-                    <DungeonRunner id='dungeonrunner'/>
+                <div className="mb-5" id="dungeonrunner">
+                    <DungeonRunner />
+                </div>
+                <div className="mb-5" id="riddles">
+                    <Riddles />
                 </div>
             </div>
         </div>
