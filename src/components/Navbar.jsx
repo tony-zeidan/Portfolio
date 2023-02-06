@@ -49,6 +49,11 @@ const Navbar = () => {
           </L>
         </li>
         <li>
+          <L to='/education'>
+            Education
+          </L>
+        </li>
+        <li>
           <L to='/#contact'>
             Contact
           </L>
@@ -98,6 +103,12 @@ const Navbar = () => {
           {' '}
           <L onClick={handleClick} to='/resume'>
             Resume
+          </L>
+        </li>
+        <li className='py-6 text-4xl'>
+          {' '}
+          <L onClick={handleClick} to='/education'>
+            Education
           </L>
         </li>
         <li className='py-6 text-4xl'>

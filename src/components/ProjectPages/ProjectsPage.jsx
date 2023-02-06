@@ -36,15 +36,15 @@ const ProjectsPage = () => {
                             </p>
                         </div>
                         <div className='mb-5 flex flex-row'>
-                            <a className='mr-5' href="https://github.com/mrempel/geohexviz">
+                            <a className='mr-10' href="https://github.com/mrempel/geohexviz">
                                 <FaGithub size={30}/>
                                 Repository
                             </a>
-                            <a className='mr-5' href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
+                            <a className='mr-14' href="https://joss.theoj.org/papers/c051df96dac973486cc312452575e804">
                                 <FaJournalWhills size={30}/>
                                 Journal
                             </a>
-                            <a href="https://cradpdf.drdc-rddc.gc.ca/PDFS/unc381/p814091_A1b.pdf">
+                            <a className='mr-10' href="https://cradpdf.drdc-rddc.gc.ca/PDFS/unc381/p814091_A1b.pdf">
                                 <FaJournalWhills size={30}/>
                                 Reference Document
                             </a>
@@ -55,7 +55,7 @@ const ProjectsPage = () => {
                             style={{backgroundImage: `url(${ghv})`}}
                             className='shadow-lg shadow-[#040c16] w-96 h-96 bg-contain group container rounded-md flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>Often times creating detailed geospatial visualizations is difficult and time-consuming.
                                 These visualizations are important because they help convey the results of analysis to
                                 analysts and decision makers. A lack of technical knowledge is often a barrier when it
@@ -81,7 +81,7 @@ const ProjectsPage = () => {
                             style={{backgroundImage: `url(${evase})`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>It is often the case that security is an afterthought in development. The Evase project is a web application that takes in backend Python code and analyzes it for vulnerabilities; most notably SQL injection vulnerabilities.</p>
                             <p>This project helped me refine my knowledge of cybersecurity concepts, the ReactJS front-end framework, and the Flask back-end framework. </p>
                         </div>
@@ -102,7 +102,7 @@ const ProjectsPage = () => {
                             style={{backgroundImage: `url(${sapphire})`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>Sapphire is a Discord bot that allows users to directly interact with the power of OpenAI
                                 models directly through the chat. It uses existing libraries and HTTP requests to
                                 retrieve information from the OpenAI API. </p>
@@ -124,9 +124,9 @@ const ProjectsPage = () => {
                         </div>
                         <div
                             style={{backgroundImage: `url(${elevator})`}}
-                            className='shadow-lg shadow-[#040c16] group container bg-auto rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
+                            className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>This project is a Java program that simulates the real-time nature of a elevator control
                                 system. It began by allowing multiple threads to communicate via directly shared memory,
                                 but it was then expanded to use remote procedure calls.</p>
@@ -146,9 +146,9 @@ const ProjectsPage = () => {
                         </div>
                         <div
                             style={{backgroundImage: `url(${ruby})`}}
-                            className='shadow-lg shadow-[#040c16] group container bg-auto rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
+                            className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>Often times chat management in Discord is convoluted and difficult. Ruby is a Discord bot
                                 written in Java with the purpose of making the jobs of chat managers easier. </p>
                         </div>
@@ -170,9 +170,9 @@ const ProjectsPage = () => {
                         </div>
                         <div
                             style={{backgroundImage: `url(${risk})`}}
-                            className='shadow-lg shadow-[#040c16] group container bg-auto rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
+                            className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
-                        <div className='mb-5 mt-1'>
+                        <div className='mb-5 mt-5'>
                             <p>This project is an implementation of the classic game RISK. It was developed using the
                                 Model-View-Controller architecture pattern where various Java Swing views are subscribed
                                 to the game model. We created artifial players that would analyze the status of the
