@@ -45,8 +45,15 @@ const TicTacToe = () => {
         setLastMoves([]);
         setTurn('X');
       } else {
+        if (newBoard.every((x) => x != null)) {
+          alert("The game is a tie!");
+          setLastMoves([]);
+          newBoard.fill(null);
+          setTurn('X');
+        } else {
         setTurn(newTurn);
         setLastMoves([...lastMoves, sq]);
+        }
       }
       setBoard(newBoard);
     }
@@ -78,8 +85,8 @@ const TicTacToe = () => {
 
   return (
       <div className="max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full rounded overflow-hidden shadow-lg">
-          <div>
-              <div className='grid mx-auto w-80 sm:grid-cols-3 md:grid-cols-3 gap-4 h-full'>
+          <div className="mx-auto">
+              <div className='grid mx-auto sm:grid-cols-3 md:grid-cols-3 h-full'>
                   <TicTacToeSquare value={board[0]} onClick={() => handleTurn(0)}/>
                   <TicTacToeSquare value={board[1]} onClick={() => handleTurn(1)}/>
                   <TicTacToeSquare value={board[2]} onClick={() => handleTurn(2)}/>
