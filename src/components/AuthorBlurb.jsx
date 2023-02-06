@@ -33,7 +33,7 @@ const AuthorBlurb = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className='mr-5'>
         <img
           src={me}  
           alt="my profile"
