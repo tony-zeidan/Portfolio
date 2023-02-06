@@ -39,7 +39,7 @@ function ResumeProjects() {
                         </p>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>Languages</p>
+                        <p className='text-2xl font-medium mb-1.5'>Languages</p>
                         <ul className='list-disc list-inside'>
                             <li>Python</li>
                             <li>Java</li>
@@ -47,19 +47,19 @@ function ResumeProjects() {
                             <li>GoLang</li>
                             <li>C, C++</li>
                         </ul>
-                        <p className='text-2xl mt-3'>Frameworks</p>
+                        <p className='text-2xl mt-3 font-medium mb-1.5'>Frameworks</p>
                         <ul className='list-disc list-inside'>
                             <li>Python Flask</li>
                             <li>React</li>
                             <li>Spring Boot</li>
                         </ul>
-                        <p className='text-2xl mt-3'>Operating Systems</p>
+                        <p className='text-2xl mt-3 font-medium mb-1.5'>Operating Systems</p>
                         <ul className='list-disc list-inside'>
                             <li>Windows</li>
                             <li>Linux</li>
                             <li>QNX</li>
                         </ul>
-                        <p className='text-2xl mt-3'>Tools</p>
+                        <p className='text-2xl mt-3 font-medium mb-1.5'>Tools</p>
                         <ul className='list-disc list-inside'>
                             <li>MS Office</li>
                             <li>Git/GitHub</li>
@@ -73,10 +73,12 @@ function ResumeProjects() {
                         </p>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>GeoHexViz</p>
-                        <p className='text-1xl'>Lead Developer</p>
-                        <p>Tools: Python (Pandas)</p>
-                        <p>Date range: <em>February 2021 - Present</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>GeoHexViz</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Lead Developer</p>
+                            <p>Tools: Python (Pandas)</p>
+                            <p>Date range: <em>February 2021 - Present</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Designed a Python package for the generation of hexagonally binned geospatial
                                 visualizations.
@@ -94,10 +96,12 @@ function ResumeProjects() {
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>Evase</p>
-                        <p className='text-1xl'>Developer / Team Lead</p>
-                        <p>Tools: ReactJS, Python (Flask), Docker</p>
-                        <p>Date range: <em>September 2022 - Present</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>Evase</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Developer / Team Lead</p>
+                            <p>Tools: ReactJS, Python (Flask), Docker</p>
+                            <p>Date range: <em>September 2022 - Present</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>A Python web application for the security threat analysis of backend Python code.</li>
                             <li>Worked in a team conforming to AGILE methodologies.</li>
@@ -112,10 +116,12 @@ function ResumeProjects() {
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>Sapphire Bot</p>
-                        <p className='text-1xl'>Sole Developer</p>
-                        <p>Tools: GoLang</p>
-                        <p>Date range: <em>September 2021 - Present</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>Sapphire Bot</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Sole Developer</p>
+                            <p>Tools: GoLang</p>
+                            <p>Date range: <em>September 2021 - Present</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Developed a discord chat bot that allows users to interact with OpenAI models directly
                                 through Discord chats.
@@ -125,10 +131,12 @@ function ResumeProjects() {
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>Elevator Control System</p>
-                        <p className='text-1xl'>Developer / Team Lead</p>
-                        <p>Tools: Java (Concurrent)</p>
-                        <p>Date range: <em>September 2021 - May 2022</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>Elevator Control System</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Developer / Team Lead</p>
+                            <p>Tools: Java (Concurrent)</p>
+                            <p>Date range: <em>September 2021 - May 2022</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Designed and assembled a program that simulates an elevator control system that uses the
                                 Shared Memory Model and UDP to send requests from one Thread to another.
@@ -145,10 +153,12 @@ function ResumeProjects() {
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>Ruby Bot</p>
-                        <p className='text-1xl'>Sole Developer</p>
-                        <p>Tools: Java (Gradle)</p>
-                        <p>Date range: <em>September 2020 - September 2021</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>Ruby Bot</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Sole Developer</p>
+                            <p>Tools: Java (Gradle)</p>
+                            <p>Date range: <em>September 2020 - September 2021</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Designed and assembled a Discord chat bot for the management of Discord chat servers.
                             </li>
@@ -156,16 +166,18 @@ function ResumeProjects() {
                                 to them accordingly.
                             </li>
                             <li>Joined the Discord API community to seek help with using the API.</li>
-                            <li>• Performed many manual tests in test discord servers and the ensured correct
+                            <li>Performed many manual tests in test discord servers and the ensured correct
                                 operation.
                             </li>
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>RISK Game</p>
-                        <p className='text-1xl'>Developer / Team Lead</p>
-                        <p>Tools: Java (Swing)</p>
-                        <p>Date range: <em>October 2019 - December 2019</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>RISK Game</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Developer / Team Lead</p>
+                            <p>Tools: Java (Swing)</p>
+                            <p>Date range: <em>October 2019 - December 2019</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Developed a Java implementation of the classic board game RISK using
                                 Model-View-Controller architecture.
@@ -185,9 +197,11 @@ function ResumeProjects() {
                         </p>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>NAV CANADA</p>
-                        <p className='text-1xl'>Surveillance Engineering Student</p>
-                        <p>Date range: <em>May 2022 - September 2022</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>NAV CANADA</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Surveillance Engineering Student</p>
+                            <p>Date range: <em>May 2022 - September 2022</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Took part in an AGILE development team performing iteration planning, reviews, and
                                 regular meetings.
@@ -207,9 +221,11 @@ function ResumeProjects() {
                         </ul>
                     </div>
                     <div className='mb-5'>
-                        <p className='text-2xl'>DND - Canadian Joint Operations Command (CJOC)</p>
-                        <p className='text-1xl'>Surveillance Engineering Student</p>
-                        <p>Date range: <em>February 2021 - January 2022</em></p>
+                        <p className='text-2xl font-medium mb-1.5'>DND - Canadian Joint Operations Command (CJOC)</p>
+                        <div className='mb-1.5'>
+                            <p className='text-1xl'>Surveillance Engineering Student</p>
+                            <p>Date range: <em>February 2021 - January 2022</em></p>
+                        </div>
                         <ul className='list-disc list-inside'>
                             <li>Developed a Python package for plotting geospatial hexagonally binned data
                                 (GeoHexViz).
