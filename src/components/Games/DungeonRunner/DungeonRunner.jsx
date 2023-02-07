@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DungeonRunner = () => {
+const DungeonRunner = (props) => {
 
   const roomMapping = {
     spawn: {
@@ -158,8 +158,7 @@ const DungeonRunner = () => {
     );
   }
 
-  const handleReset = (e) => {
-    e.preventDefault();
+  const handleReset = () => {
     setCurrRoom(roomMapping['spawn']);
   }
 
@@ -169,6 +168,11 @@ const DungeonRunner = () => {
     } else {
       alert("There is no exit that way!");
     }
+  }
+
+  const endGame = () => {
+    handleReset();
+    props.onEnd();
   }
 
   const getMoveButtons = () => {
@@ -189,6 +193,7 @@ const DungeonRunner = () => {
       {getMoveButtons()}
       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={handleSubmit}>Submit</span>
       <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={handleReset}>Reset</span>
+      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" onClick={endGame}>Exit game</span>
     </div>
 </div>
   );

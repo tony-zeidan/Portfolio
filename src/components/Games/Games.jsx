@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TicTacToe from "./TicTacToe/TicTacToe";
 import DungeonRunner from './DungeonRunner/DungeonRunner';
 import Riddles from './EscapeRoom/Riddles';
+import Game from "./Game";
 
 const Games = () => {
     return (
@@ -13,14 +14,11 @@ const Games = () => {
                     </p>
                     <p className='py-6 text-2xl'>Play some games while you are here!</p>
                 </div>
-                <div className="mb-5" id="tictactoe">
-                    <TicTacToe />
+                <div className="mb-5">
+                    <Game name="TicTacToe" info="Surely you know of this game!" element={<TicTacToe />} />
                 </div>
-                <div className="mb-5" id="dungeonrunner">
-                    <DungeonRunner />
-                </div>
-                <div className="mb-5" id="riddles">
-                    <Riddles />
+                <div className="mt-5 mb-5">
+                    <Game name="DungeonRunner" info="A very simple game inspired from some of my early software projects." element={<DungeonRunner />} />
                 </div>
             </div>
         </div>
