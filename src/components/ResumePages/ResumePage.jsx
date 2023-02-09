@@ -1,6 +1,5 @@
 import Navbar from "../Navbar";
 import ResumeProjects from "./ResumeProjects";
-import JsPDF from 'jspdf'
 
 function ResumePage() {
 
@@ -10,7 +9,6 @@ function ResumePage() {
         <div>
             <Navbar/>
             <ResumeProjects/>
-
         </div>
     );
 }

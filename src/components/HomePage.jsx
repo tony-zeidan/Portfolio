@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function HomePage(props) {
 
     return (
-        <div>
+        <div className="relative">
             <Navbar/>
             <Home />
         </div>

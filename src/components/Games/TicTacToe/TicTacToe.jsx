@@ -1,5 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import TicTacToeSquare from "./TicTacToeSquare";
+import { Alert } from 'flowbite-react';
+import {HiEye, HiInformationCircle} from "react-icons/hi";
 
 function calculateWinner(squares) {
     const lines = [
@@ -22,17 +24,44 @@ function calculateWinner(squares) {
 }
 
 const TicTacToe = (props) => {
-
-    const [started, setStarted] = useState(false);
+    
     const [turn, setTurn] = useState('X');
     const [board, setBoard] = useState(Array(9).fill(null));
     const [lastMoves, setLastMoves] = useState([]);
+    const [winner, setWinner] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
+    const [showCantPlay, setShowCantPlay] = useState(false);
+    const [showWinner, setShowWinner] = useState(false);
+
+    useEffect(() => {
+        if (showCantPlay) {
+            const timeId = setTimeout(() => {
+                // After 3 seconds set the show value to false
+                setShowCantPlay(false)
+            }, 8000);
+
+            return () => {
+                clearTimeout(timeId)
+            };
+        }
+    }, [showCantPlay]);
+
+    useEffect(() => {
+        if (showCantPlay) {
+            const timeId = setTimeout(() => {
+                // After 3 seconds set the show value to false
+                setShowCantPlay(false)
+            }, 8000);
+
+            return () => {
+                clearTimeout(timeId)
+            };
+        }
+    }, [showCantPlay]);
 
     const handleTurn = (sq) => {
-        console.log(sq);
         if (board[sq] != null) {
-            console.log(board[sq])
-            alert("Cannot play here, the space is filled.");
+            setShowCantPlay(true);
             return;
         } else {
             let newBoard = board.slice();
@@ -41,16 +70,13 @@ const TicTacToe = (props) => {
 
             newBoard[sq] = currTurn;
             if (calculateWinner(newBoard)) {
-                alert(`${currTurn} wins the match!`);
-                newBoard.fill(null);
-                setLastMoves([]);
-                setTurn('X');
+                setWinner(true);
+                setShowWinner(true);
             } else {
                 if (newBoard.every((x) => x != null)) {
-                    alert("The game is a tie!");
-                    setLastMoves([]);
-                    newBoard.fill(null);
-                    setTurn('X');
+                    setWinner(false);
+                    setGameOver(true);
+                    setShowWinner(true);
                 } else {
                     setTurn(newTurn);
                     setLastMoves([...lastMoves, sq]);
@@ -62,10 +88,13 @@ const TicTacToe = (props) => {
     }
 
     const handleReset = () => {
+        setShowCantPlay(false);
         let b = board.slice();
         b.fill(null);
         setBoard(b);
         setLastMoves([]);
+        setGameOver(false);
+        setWinner(false);
         setTurn('X');
     }
 
@@ -75,6 +104,8 @@ const TicTacToe = (props) => {
             let moves = lastMoves.slice();
             let lastMove = moves.pop();
             b[lastMove] = null;
+            setWinner(false);
+            setGameOver(false);
             setTurn((turn === 'X' ? 'O' : 'X'));
             setLastMoves(moves);
             setBoard(b);
@@ -93,7 +124,64 @@ const TicTacToe = (props) => {
 
         <div
             className="max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full rounded overflow-hidden shadow-lg">
-            <div className="mx-auto">
+            { showWinner && winner ? (
+                <div className="mb-5">
+                    <Alert
+                        color="success"
+                        withBorderAccent={true}
+                        onDismiss={()=>setShowWinner(false)}
+                        additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">{`Player ${turn} wins the game! Nice try player ${turn === 'X' ? 'O' : 'X'}!`}</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-green-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-800 dark:hover:bg-green-900" onClick={handleReset}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-green-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300 dark:border-green-800 dark:text-green-800 dark:hover:text-white">Dismiss</button></div></React.Fragment>}
+                        icon={HiInformationCircle}
+                    >
+                  <span>
+                    <span className="font-medium">
+                      Winner!
+                    </span>
+                      {' '}{`Player ${turn} wins the match!`}
+                  </span>
+                </Alert>
+                </div>
+            ) : (
+                <></>
+            )}
+            { showWinner && !winner && gameOver ? (
+                <div className="mb-5">
+                <Alert
+                    color="info"
+                    withBorderAccent={true}
+                    onDismiss={()=>setShowWinner(false)}
+                    additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">You can't use your turn on this space, the other player already has.</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-800 dark:hover:bg-blue-900" onClick={()=>{handleReset()}}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" onClick={()=>setShowWinner(false)}>Dismiss</button></div></React.Fragment>}
+                    icon={HiInformationCircle}
+                >
+                  <span>
+                    <span className="font-medium">
+                      Tie game!
+                    </span>
+                      {' '}The match was a tie.
+                  </span>
+                </Alert>
+                </div>
+            ) : (
+                <></>
+            )}
+            {showCantPlay ? (
+                <div className="mb-5">
+                <Alert
+                    color="info"
+                    withBorderAccent={true}
+                    onDismiss={()=>setShowCantPlay(false)}
+                    additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">You can't use your turn on this space, the other player already has.</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-800 dark:hover:bg-blue-900" onClick={()=>{handleReset()}}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" onClick={()=>setShowCantPlay(false)}>Dismiss</button></div></React.Fragment>}
+                    icon={HiInformationCircle}
+                >
+                    <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">
+                        You can't play there!
+                    </h3>
+                </Alert>
+                </div>
+            ) : (
+                <></>
+            )}
+            <div className="mt-2 mx-auto">
                 <div className='grid mx-auto sm:grid-cols-3 md:grid-cols-3 h-full'>
                     <TicTacToeSquare value={board[0]} onClick={() => handleTurn(0)}/>
                     <TicTacToeSquare value={board[1]} onClick={() => handleTurn(1)}/>
@@ -127,4 +215,9 @@ const TicTacToe = (props) => {
         </div>
     );
 }
+
+TicTacToe.defaultProps = {
+    onEnd: ()=>{},
+}
+
 export default TicTacToe;

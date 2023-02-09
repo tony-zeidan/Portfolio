@@ -4,7 +4,7 @@ import Games from "./Games";
 function GamesPage() {
 
     return (
-        <div>
+        <div className="relative">
             <Navbar/>
             <Games />
         </div>

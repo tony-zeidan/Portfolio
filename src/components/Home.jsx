@@ -6,6 +6,7 @@ import Skills from "./Skills";
 import Projects from "./ProjectsShort/Projects";
 import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
+import ProjectSlides from "./ProjectsShort/ProjectSlides";
 
 function Home() {
 
@@ -23,12 +24,13 @@ function Home() {
 
     return (
     <div>
-      <Navbar />
-      <AuthorBlurb />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+        <div>
+            <AuthorBlurb />
+            <About />
+            <Skills />
+            <ProjectSlides />
+            <Contact />
+        </div>
     </div>
   );
 }

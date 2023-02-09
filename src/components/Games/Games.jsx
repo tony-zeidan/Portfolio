@@ -20,9 +20,6 @@ const Games = () => {
                 <div className="mt-5 mb-5">
                     <Game name="Dungeon Runner" info="A very simple game inspired from some of my early software projects." element={<DungeonRunner />} />
                 </div>
-                <div className="mt-5 mb-5">
-                    <Game name="Escape Room" info="Solve some software development-related riddles to escape!" element={<Riddles />} />
-                </div>
             </div>
         </div>
     );
