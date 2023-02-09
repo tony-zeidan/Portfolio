@@ -24,7 +24,7 @@ function calculateWinner(squares) {
 }
 
 const TicTacToe = (props) => {
-    
+
     const [turn, setTurn] = useState('X');
     const [board, setBoard] = useState(Array(9).fill(null));
     const [lastMoves, setLastMoves] = useState([]);
@@ -32,6 +32,7 @@ const TicTacToe = (props) => {
     const [gameOver, setGameOver] = useState(false);
     const [showCantPlay, setShowCantPlay] = useState(false);
     const [showWinner, setShowWinner] = useState(false);
+    const [showCantBack, setShowCantBack] = useState(false);
 
     useEffect(() => {
         if (showCantPlay) {
@@ -47,10 +48,10 @@ const TicTacToe = (props) => {
     }, [showCantPlay]);
 
     useEffect(() => {
-        if (showCantPlay) {
+        if (showWinner) {
             const timeId = setTimeout(() => {
                 // After 3 seconds set the show value to false
-                setShowCantPlay(false)
+                setShowWinner(false)
             }, 8000);
 
             return () => {
@@ -58,6 +59,19 @@ const TicTacToe = (props) => {
             };
         }
     }, [showCantPlay]);
+
+    useEffect(() => {
+        if (showCantBack) {
+            const timeId = setTimeout(() => {
+                // After 3 seconds set the show value to false
+                setShowCantBack(false)
+            }, 8000);
+
+            return () => {
+                clearTimeout(timeId)
+            };
+        }
+    }, [showCantBack]);
 
     const handleTurn = (sq) => {
         if (board[sq] != null) {
@@ -88,7 +102,6 @@ const TicTacToe = (props) => {
     }
 
     const handleReset = () => {
-        setShowCantPlay(false);
         let b = board.slice();
         b.fill(null);
         setBoard(b);
@@ -96,6 +109,9 @@ const TicTacToe = (props) => {
         setGameOver(false);
         setWinner(false);
         setTurn('X');
+        setShowCantBack(false);
+        setShowWinner(false);
+        setShowCantPlay(false);
     }
 
     const handleBackOne = () => {
@@ -110,7 +126,7 @@ const TicTacToe = (props) => {
             setLastMoves(moves);
             setBoard(b);
         } else {
-            alert("Can't move back any more!");
+            setShowCantBack(true);
         }
     }
 
@@ -130,7 +146,7 @@ const TicTacToe = (props) => {
                         color="success"
                         withBorderAccent={true}
                         onDismiss={()=>setShowWinner(false)}
-                        additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">{`Player ${turn} wins the game! Nice try player ${turn === 'X' ? 'O' : 'X'}!`}</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-green-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-800 dark:hover:bg-green-900" onClick={handleReset}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-green-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300 dark:border-green-800 dark:text-green-800 dark:hover:text-white">Dismiss</button></div></React.Fragment>}
+                        additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">{`Player ${turn} wins the game! Nice try player ${turn === 'X' ? 'O' : 'X'}!`}</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-green-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-green-800 focus:ring-4 focus:ring-green-300 dark:bg-green-800 dark:hover:bg-green-900" onClick={handleReset}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-green-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-green-700 hover:bg-green-800 hover:text-white focus:ring-4 focus:ring-green-300 dark:border-green-800 dark:text-green-800 dark:hover:text-white" onClick={()=>setShowWinner(false)}>Dismiss</button></div></React.Fragment>}
                         icon={HiInformationCircle}
                     >
                   <span>
@@ -150,7 +166,7 @@ const TicTacToe = (props) => {
                     color="info"
                     withBorderAccent={true}
                     onDismiss={()=>setShowWinner(false)}
-                    additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">You can't use your turn on this space, the other player already has.</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-800 dark:hover:bg-blue-900" onClick={()=>{handleReset()}}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" onClick={()=>setShowWinner(false)}>Dismiss</button></div></React.Fragment>}
+                    additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">The game is a tie! Good job players, well fought.</div><div className="flex"><button type="button" className="mr-2 inline-flex items-center rounded-lg bg-blue-700 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-800 dark:hover:bg-blue-900" onClick={()=>{handleReset()}}><HiEye className="-ml-0.5 mr-2 h-4 w-4" />Reset</button><button type="button" className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" onClick={()=>setShowWinner(false)}>Dismiss</button></div></React.Fragment>}
                     icon={HiInformationCircle}
                 >
                   <span>
@@ -181,17 +197,34 @@ const TicTacToe = (props) => {
             ) : (
                 <></>
             )}
+            {showCantBack ? (
+                <div className="mb-5">
+                    <Alert
+                        color="info"
+                        withBorderAccent={true}
+                        onDismiss={()=>setShowCantBack(false)}
+                        additionalContent={<React.Fragment><div className="mt-2 mb-4 text-sm text-blue-700 dark:text-blue-800">There is no history any more. Can't move back in time.</div><div className="flex"><button type="button" className="rounded-lg border border-blue-700 bg-transparent px-3 py-1.5 text-center text-xs font-medium text-blue-700 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 dark:border-blue-800 dark:text-blue-800 dark:hover:text-white" onClick={()=>setShowCantBack(false)}>Dismiss</button></div></React.Fragment>}
+                        icon={HiInformationCircle}
+                    >
+                        <h3 className="text-lg font-medium text-blue-700 dark:text-blue-800">
+                            You can't go back any more!
+                        </h3>
+                    </Alert>
+                </div>
+            ) : (
+                <></>
+            )}
             <div className="mt-2 mx-auto">
                 <div className='grid mx-auto sm:grid-cols-3 md:grid-cols-3 h-full'>
-                    <TicTacToeSquare value={board[0]} onClick={() => handleTurn(0)}/>
-                    <TicTacToeSquare value={board[1]} onClick={() => handleTurn(1)}/>
-                    <TicTacToeSquare value={board[2]} onClick={() => handleTurn(2)}/>
-                    <TicTacToeSquare value={board[3]} onClick={() => handleTurn(3)}/>
-                    <TicTacToeSquare value={board[4]} onClick={() => handleTurn(4)}/>
-                    <TicTacToeSquare value={board[5]} onClick={() => handleTurn(5)}/>
-                    <TicTacToeSquare value={board[6]} onClick={() => handleTurn(6)}/>
-                    <TicTacToeSquare value={board[7]} onClick={() => handleTurn(7)}/>
-                    <TicTacToeSquare value={board[8]} onClick={() => handleTurn(8)}/>
+                    <TicTacToeSquare value={board[0]} onClick={() => handleTurn(0)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[1]} onClick={() => handleTurn(1)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[2]} onClick={() => handleTurn(2)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[3]} onClick={() => handleTurn(3)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[4]} onClick={() => handleTurn(4)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[5]} onClick={() => handleTurn(5)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[6]} onClick={() => handleTurn(6)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[7]} onClick={() => handleTurn(7)} over={gameOver||winner}/>
+                    <TicTacToeSquare value={board[8]} onClick={() => handleTurn(8)} over={gameOver||winner}/>
                 </div>
             </div>
             <div className="px-6 py-4">
