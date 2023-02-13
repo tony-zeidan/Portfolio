@@ -1,12 +1,10 @@
 import About from "./About";
 import Contact from "./Contact";
 import AuthorBlurb from "./AuthorBlurb";
-import Navbar from "./Navbar";
 import Skills from "./Skills";
 import Projects from "./ProjectsShort/Projects";
 import {useEffect} from "react";
 import {useLocation} from "react-router-dom";
-import ProjectSlides from "./ProjectsShort/ProjectSlides";
 
 function Home() {
 
@@ -28,7 +26,7 @@ function Home() {
             <AuthorBlurb />
             <About />
             <Skills />
-            <ProjectSlides />
+            <Projects />
             <Contact />
         </div>
     </div>
