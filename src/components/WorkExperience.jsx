@@ -23,3 +23,5 @@ const WorkExperience = ({title, position, icon, bullets}) => {
         </div>
     );
 }
+
+export default WorkExperience;

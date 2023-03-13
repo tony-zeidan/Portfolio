@@ -7,7 +7,6 @@ import GamesPage from "./components/Games/GamesPage";
 import ResumePage from "./components/ResumePages/ResumePage";
 import ProjectsPage from "./components/ProjectPages/ProjectsPage";
 import EducationPage from "./components/EducationPages/EducationPage";
-import WorkExperience from "./components/WorkExperience";
 
 function App() {
     return (
@@ -16,7 +15,6 @@ function App() {
                 <Route index element={<HomePage/>}/>
                 <Route path='/resume' element={<ResumePage/>}/>
                 <Route path='/games' element={<GamesPage/>}/>
-                <Route path='/experience' element={<WorkExperience />}/>
                 <Route path='/projects' element={<ProjectsPage/>}/>
                 <Route path='/education' element={<EducationPage/>}/>
             </Routes>
