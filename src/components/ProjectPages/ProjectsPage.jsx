@@ -8,7 +8,6 @@ import sapphire from '../../assets/sapphire.png';
 import elevator from '../../assets/elevator.png';
 import risk from '../../assets/risk.png';
 import {FaGithub, FaJournalWhills} from "react-icons/fa";
-import Navbar from "../Navbar";
 
 const ProjectsPage = () => {
     const location = useLocation()
@@ -25,13 +24,11 @@ const ProjectsPage = () => {
 
     return (
         <div>
-            <Navbar/>
             <div id='projects' className='w-full h-full text-gray-300 flex-nowrap bg-[#0a192f]'>
-
                 <div className='max-w-[1000px] mx-auto p-4 w-full h-full'>
                     <div id="geohexviz" className='mt-36'>
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl font-bold border-b-4 border-cyan-500 text-start'>
                                 GeoHexViz
                             </p>
                         </div>

@@ -3,13 +3,8 @@ import ResumeProjects from "./ResumeProjects";
 
 function ResumePage() {
 
-
-
     return (
-        <div>
-            <Navbar/>
-            <ResumeProjects/>
-        </div>
+        <ResumeProjects />
     );
 }
 export default ResumePage;

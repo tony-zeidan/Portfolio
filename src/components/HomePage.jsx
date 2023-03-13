@@ -5,7 +5,6 @@ function HomePage(props) {
 
     return (
         <div className="relative">
-            <Navbar/>
             <Home />
         </div>
     );
