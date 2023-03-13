@@ -16,53 +16,58 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50'>
+    <div className='antialiased relative flex flex-wrap items-center justify-between bg-[#0a192f] text-gray-300 z-50'>
       <div>
         <h1 className='font-thin text-2xl italic font-serif'>T.A</h1>
       </div>
       {/* menu */}
-      <ul className='hidden md:flex gap-x-8'>
-        <li>
-          <L to='/'>
+      <div className='lg:flex flex-grow items-center'>
+      <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
+        <li className='p-0'>
+          <L className='px-6 py-4 flex items-center leading-snug hover:opacity-75 hover:bg-sky-600' to='/'>
             Home
           </L>
         </li>
-        <li>
-          <L to='/#about'>
+        <li className='p-0'>
+          <L className='px-6 py-4 flex items-center leading-snug hover:opacity-75 hover:bg-sky-600' to='/#about'>
             About
           </L>
         </li>
-        <li>
-          <L to='/#skills'>
+        <li className='p-0'>
+          <L className='px-6 py-4 flex items-center leading-snug hover:opacity-75 hover:bg-sky-600' to='/#skills'>
             Skills
           </L>
         </li>
-        <li>
-          <L to='/experience'>
-            Experience
-          </L>
+        <li className='p-0'>
+          <div className='group inline-block relative'>
+            <button className='inline-flex items-center px-3 py-4 flex leading-snug hover:opacity-75 hover:bg-sky-600'>
+              <span>Experience</span>
+            </button>
+            <div className="absolute hidden group-hover:block">
+              <L className='bg-[#0a192f] hover:bg-sky-700 py-2 px-4 block whitespace-no-wrap' to="/experience">
+                Industry Experience
+              </L>
+              <L className='bg-[#0a192f] hover:bg-sky-700 py-2 px-4 block whitespace-no-wrap' to="/projects">
+                Projects
+              </L>
+              <L className='rounded-b bg-[#0a192f] hover:bg-sky-700 py-2 px-4 block whitespace-no-wrap' to="/resume">
+                Formal Resume
+              </L>
+            </div>
+          </div>
         </li>
-        <li>
-          <L to='/projects'>
-            Projects
-          </L>
-        </li>
-        <li>
-          <L to='/resume'>
-            Resume
-          </L>
-        </li>
-        <li>
-          <L to='/#contact'>
+        <li className='p-0'>
+          <L className='px-6 py-4 flex items-center leading-snug hover:opacity-75 hover:bg-sky-600' to='/#contact'>
             Contact
           </L>
         </li>
-        <li>
-          <L to='/games'>
+        <li className='p-0'>
+          <L className='px-6 py-4 flex items-center leading-snug hover:opacity-75 hover:bg-sky-600' to='/games'>
             Games
           </L>
         </li>
       </ul>
+      </div>
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>
         {!nav ? <FaBars /> : <FaTimes />}

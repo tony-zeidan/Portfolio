@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import TicTacToeSquare from "./TicTacToeSquare";
-import { Alert } from 'flowbite-react';
 import {HiEye, HiInformationCircle} from "react-icons/hi";
+import {Alert} from "flowbite-react";
 
 function calculateWinner(squares) {
     const lines = [
