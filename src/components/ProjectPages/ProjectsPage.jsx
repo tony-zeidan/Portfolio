@@ -7,6 +7,7 @@ import ruby from '../../assets/ruby.png';
 import sapphire from '../../assets/sapphire.png';
 import elevator from '../../assets/elevator.png';
 import risk from '../../assets/risk.png';
+import bookstore from '../../assets/bookstore.png';
 import {FaGithub, FaJournalWhills} from "react-icons/fa";
 import Navbar from "../Navbar";
 
@@ -72,7 +73,7 @@ const ProjectsPage = () => {
                             </p>
                         </div>
                         <div className='mb-5'>
-                            <a>
+                            <a href="https://github.com/Bruce-liushaopeng/Evase">
                                 <FaGithub size={30}/>
                             </a>
                             <p className='mt-2'>This project is my Carleton University capstone project.</p>
@@ -84,6 +85,26 @@ const ProjectsPage = () => {
                         <div className='mb-5 mt-5'>
                             <p>It is often the case that security is an afterthought in development. The Evase project is a web application that takes in backend Python code and analyzes it for vulnerabilities; most notably SQL injection vulnerabilities.</p>
                             <p>This project helped me refine my knowledge of cybersecurity concepts, the ReactJS front-end framework, and the Flask back-end framework. </p>
+                        </div>
+                    </div>
+                    <div id="fakeamazonbookstore">
+                        <div className='pb-8 w-full'>
+                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                                Fake Amazon Bookstore
+                            </p>
+                        </div>
+                        <div className='mb-5'>
+                            <a href="https://github.com/tony-zeidan/fake-amazon-bookstore">
+                                <FaGithub size={30}/>
+                            </a>
+                            <p className='mt-2'>This project simulates an Amazon Bookstore where users can interact with books that a page-administrator puts up for sale. The administrator role can control inventory quantities, edit book descriptions, and upload new books! The users can browse the store, filter, and add books to their cart.</p>
+                        </div>
+                        <div
+                            style={{backgroundImage: `url(${bookstore})`}}
+                            className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
+                        />
+                        <div className='mb-5 mt-5'>
+                            <p>I learned a lot during this project. I enhanced my knowledge of the SpringBoot framework, JavaScript/JQuery, HTML, CSS, and lots more. I also learned about the Circuit Breaker pattern and Aspect-Oriented Programming by implementing them in the project. Moreover, I learned a lot about web-development in general such as best practices for security, and where the burden of processing should be placed. </p>
                         </div>
                     </div>
                     <div id="sapphirebot">

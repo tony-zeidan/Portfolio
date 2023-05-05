@@ -7,7 +7,6 @@ function ResumePage() {
 
     return (
         <div>
-            <Navbar/>
             <ResumeProjects/>
         </div>
     );

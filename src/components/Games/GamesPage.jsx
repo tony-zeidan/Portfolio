@@ -5,7 +5,6 @@ function GamesPage() {
 
     return (
         <div className="relative">
-            <Navbar/>
             <Games />
         </div>
     );

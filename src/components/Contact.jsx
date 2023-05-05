@@ -8,10 +8,17 @@ const Contact = () => {
                 <p className='text-4xl font-bold inline border-b-4 border-cyan-500 text-gray-300'>Contact</p>
                 <p className='text-gray-300 py-4'>Send me a message</p>
             </div>
+            {/*
             <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
             <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
             <textarea className='bg-[#ccd6f6] p-2' name="message" rows="10" placeholder='Message'></textarea>
             <button className='text-white border-2 hover:bg-cyan-500 hover:border-cyan-500 px-4 py-3 my-8 mx-auto flex items-center'>Let's Collaborate</button>
+            */
+            }
+            <a href="mailto: tony.azp25@gmail.com" alt="Gmail">
+            <img className='w-80' src="https://img.shields.io/badge/email-tony.azp25%40gmail.com-informational?style=for-the-badge" />
+            </a>
+            <p className='text-gray-300 py-4'>Email me so we can talk more!</p>
         </div>
     </div>
   )

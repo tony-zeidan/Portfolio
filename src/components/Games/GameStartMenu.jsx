@@ -9,9 +9,9 @@ function GameStartMenu(props) {
     }
 
     return (<div
-            className="shadow-lg shadow-[#040c16] group container bg-contain rounded-md flex py-3 px-3 justify-center flex flex-col items-center mx-auto">
-            <div className="flex justify-center items-center flex-col" >
-                        <span className=' text-lg font-bold text-white tracking-wider'>
+            className="w-full shadow-lg shadow-[#040c16] group container bg-contain rounded-md flex py-3 px-3 justify-center flex flex-col items-center mx-auto">
+            <div className="w-full flex justify-center items-center flex-col" >
+                        <span className='text-lg font-bold text-white tracking-wider'>
                         {props.name}
                         </span>
                 <p className='text-center'>{props.info}</p>
