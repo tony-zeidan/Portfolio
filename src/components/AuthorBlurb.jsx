@@ -1,6 +1,5 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import me from '../assets/me.png';
 import { Link } from "react-scroll"; 
 
 const AuthorBlurb = () => {
@@ -35,7 +34,7 @@ const AuthorBlurb = () => {
       </div>
       <div className='mr-5'>
         <img
-          src={me}  
+          src="images/me.png"
           alt="my profile"
           className="rounded-2xl mx-auto w-2/3 md:w-full"
         />

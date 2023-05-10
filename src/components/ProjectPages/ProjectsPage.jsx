@@ -1,13 +1,6 @@
 import React, {useEffect} from 'react'
 import {useLocation} from "react-router-dom";
 
-import ghv from '../../assets/geohexviz.png';
-import evase from '../../assets/evase.png';
-import ruby from '../../assets/ruby.png';
-import sapphire from '../../assets/sapphire.png';
-import elevator from '../../assets/elevator.png';
-import risk from '../../assets/risk.png';
-import bookstore from '../../assets/bookstore.png';
 import {FaGithub, FaJournalWhills} from "react-icons/fa";
 import Navbar from "../Navbar";
 
@@ -53,7 +46,7 @@ const ProjectsPage = () => {
                         </div>
                         <p className='mt-2 mb-5'>This is one of the projects I'm most proud of. Meet GeoHexViz!</p>
                         <div
-                            style={{backgroundImage: `url(${ghv})`}}
+                            style={{backgroundImage: `url(/images/geohexviz.png)`}}
                             className='shadow-lg shadow-[#040c16] w-96 h-96 bg-contain group container rounded-md flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -79,7 +72,7 @@ const ProjectsPage = () => {
                             <p className='mt-2'>This project is my Carleton University capstone project.</p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${evase})`}}
+                            style={{backgroundImage: `url(/images/evase.png)`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -100,7 +93,7 @@ const ProjectsPage = () => {
                             <p className='mt-2'>This project simulates an Amazon Bookstore where users can interact with books that a page-administrator puts up for sale. The administrator role can control inventory quantities, edit book descriptions, and upload new books! The users can browse the store, filter, and add books to their cart.</p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${bookstore})`}}
+                            style={{backgroundImage: `url(/images/bookstore.png)`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -120,7 +113,7 @@ const ProjectsPage = () => {
                             <p className='mt-2'>This is my first in-depth GoLang project!</p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${sapphire})`}}
+                            style={{backgroundImage: `url(/images/sapphire.png)`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -144,7 +137,7 @@ const ProjectsPage = () => {
                             </p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${elevator})`}}
+                            style={{backgroundImage: `url(/images/elevator.png)`}}
                             className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -166,7 +159,7 @@ const ProjectsPage = () => {
                             <p className='mt-2'>This is my first Discord-related project!</p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${ruby})`}}
+                            style={{backgroundImage: `url(/images/ruby.png)`}}
                             className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
@@ -190,7 +183,7 @@ const ProjectsPage = () => {
                             </p>
                         </div>
                         <div
-                            style={{backgroundImage: `url(${risk})`}}
+                            style={{backgroundImage: `url(/images/risk.png)`}}
                             className='shadow-lg shadow-[#040c16] group container bg-contain rounded-md w-96 h-96 bg-contain  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>

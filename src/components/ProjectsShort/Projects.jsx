@@ -1,11 +1,4 @@
 import React from 'react';
-import ghv from '../../assets/ghv.png';
-import evase from '../../assets/evase.png';
-import ruby from '../../assets/ruby.png';
-import sapphire from '../../assets/sapphire.png';
-import elevator from '../../assets/elevator.png';
-import risk from '../../assets/risk.png';
-import bookstore from '../../assets/bookstore.png';
 import Project from './Project';
 
 const Projects = () => {
@@ -19,13 +12,13 @@ const Projects = () => {
           <p className='py-6 text-2xl'>Check out some of my best work!</p>
         </div>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          <Project projectTitle="GeoHexViz" projectDescription="A Python package for the generation of hexagonnally binnned geospatial visualizations!" imgUrl={ghv} link='/projects/#geohexviz'/>
-          <Project projectTitle="EVASE" projectDescription="A Flask/React Web Application with the aim to detect vulnerabilities in backend Python code!" imgUrl={evase} link='/projects/#evase'/>
-          <Project projectTitle="Fake Amazon Bookstore" projectDescription="A SpringBoot-based web application that simulates the behaviour of an amazon bookstore" imgUrl={bookstore} link='/projects/#fakeamazonbookstore'/>
-          <Project projectTitle="Sapphire Bot" projectDescription="A discord bot (created in Go) that provides users direct chat access to OpenAI models!" imgUrl={sapphire} link='/projects/#sapphirebot'/>
+          <Project projectTitle="GeoHexViz" projectDescription="A Python package for the generation of hexagonnally binnned geospatial visualizations!" imgUrl="/images/ghv.png" link='/projects/#geohexviz'/>
+          <Project projectTitle="EVASE" projectDescription="A Flask/React Web Application with the aim to detect vulnerabilities in backend Python code!" imgUrl="/images/evase.png" link='/projects/#evase'/>
+          <Project projectTitle="Fake Amazon Bookstore" projectDescription="A SpringBoot-based web application that simulates the behaviour of an amazon bookstore" imgUrl="/images/bookstore.png" link='/projects/#fakeamazonbookstore'/>
+          <Project projectTitle="Sapphire Bot" projectDescription="A discord bot (created in Go) that provides users direct chat access to OpenAI models!" imgUrl="/images/sapphire.png" link='/projects/#sapphirebot'/>
 
-          <Project projectTitle="Elevator Subsystem" projectDescription="A concurrent real-time Java program that simulates the operation of an elevator!" imgUrl={elevator} link='/projects/#elevatorsystem'/>
-          <Project projectTitle="RISK Game" projectDescription="An interactive RISK game made with Java Swing and the MVC architecture pattern!" imgUrl={risk} link='/projects/#riskgame'/>
+          <Project projectTitle="Elevator Subsystem" projectDescription="A concurrent real-time Java program that simulates the operation of an elevator!" imgUrl="/images/elevator.png" link='/projects/#elevatorsystem'/>
+          <Project projectTitle="RISK Game" projectDescription="An interactive RISK game made with Java Swing and the MVC architecture pattern!" imgUrl="/images/risk.png" link='/projects/#riskgame'/>
         </div>
       </div>
     </div>
