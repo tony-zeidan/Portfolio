@@ -96,27 +96,8 @@ function ResumeProjects() {
                             EXPERIENCE
                         </p>
                         <ExperienceEntry
-                            num="3"
-                            dateStr="November 2022 – January 2023 (3 months)"
-                            titleStr="Primary Developer/Analyst"
-                            orgStr="Canadian Joint Operations Command, Department of National Defence"
-                            projStr="GeoHexViz (Python)"
-                            linkStr="https://github.com/mrempel/geohexviz"
-                            infoLst={
-                                [
-                                    "Python package for the generation of hexagonally binned geospatial visualizations.",
-                                    ["Extensive software documentation.", "Created a journal submission for the software.", "Made Sphinx generated code documentation."],
-                                    "Made continuous integration tests using GitHub Actions.",
-                                    "Packaged the project using setup tools and ensured correct installation through tests on various \n" +
-                                    "systems and environments using PHP and shell scripting.",
-                                    "Responded to JOSS (see below) peer-review and fixed issues with installation and running \n" +
-                                    "code demos."
-                                ]
-                            }
-                        />
-                        <ExperienceEntry
                             num="2"
-                            dateStr="April 2022 - September 2022 (6 months)"
+                            dateStr="May 2022 – September 2022 (4 months)"
                             titleStr="Surveillance Engineering Student"
                             orgStr="NAV Canada"
                             infoLst={
@@ -140,7 +121,7 @@ function ResumeProjects() {
                         />
                         <ExperienceEntry
                             num="1"
-                            dateStr="February 2021 – February 2022 (13 months)"
+                            dateStr="February 2021 – January 2022 (10 months)"
                             titleStr="Developer/Analyst"
                             orgStr="Canadian Joint Operations Command, Department of National Defence"
                             projStr="GeoHexViz (Python)"
@@ -179,7 +160,7 @@ function ResumeProjects() {
                         <ExperienceEntry
                             prefixStr="Applied Project"
                             num="5"
-                            dateStr="September 2022 – May 2023 (9 months)"
+                            dateStr="September 2022 – May 2022 (8 months)"
                             titleStr="Primary Developer, Team Lead"
                             projStr="EVASE (Python Flask, React JavaScript)"
                             infoLst={
