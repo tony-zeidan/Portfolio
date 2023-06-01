@@ -26,7 +26,7 @@ function ResumeProjects() {
                         </p>
                         <div className="mt-3">
                             <p>
-                                Tony Abou Zeidan holds a Bachelor’s Degree of Engineering (Software) from Carleton University. Mr.
+                                Tony Zeidan holds a Bachelor’s Degree of Engineering (Software) from Carleton University. Mr.
                                 Zeidan has completed four co-op terms with the Canadian Joint Operations Command and NAV Canada,
                                 and is looking to join a progressive organization where he can use his technical and communication skills
                                 and experience to help advance the organization’s software development goals. Mr. Zeidan brings
