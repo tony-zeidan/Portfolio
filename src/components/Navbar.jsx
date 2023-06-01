@@ -112,7 +112,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/tony-abou-zeidan-609429195/'
+              href='https://www.linkedin.com/in/tony-zeidan-609429195/'
             >
               Linkedin <FaLinkedin size={30} />
             </a>
