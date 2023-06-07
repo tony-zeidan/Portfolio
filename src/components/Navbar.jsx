@@ -43,9 +43,9 @@ const Navbar = () => {
           </L>
         </li>
         <li>
-          <L to='/resume'>
+          <a href='cv/Tony-Zeidan-CV.pdf'>
             Resume
-          </L>
+          </a>
         </li>
         <li>
           <L to='/#contact'>
