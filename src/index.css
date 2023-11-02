@@ -6,7 +6,7 @@
 @layer base {
     body {
         @apply font-[Raleway];
-        @apply bg-[#0a192f]
+        @apply bg-[#181818]
     }
     li {
         @apply px-4;
@@ -20,7 +20,7 @@
     background-position: center;
     height: 250px;
 }
-
+b
 .content-div:hover {
     background-image: linear-gradient(
         to right,

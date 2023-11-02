@@ -20,7 +20,7 @@ const ProjectsPage = () => {
     return (
         <div>
             <Navbar/>
-            <div id='projects' className='w-full h-full text-gray-300 flex-nowrap bg-[#0a192f]'>
+            <div id='projects' className='w-full h-full text-gray-300 flex-nowrap bg-[#181818]'>
 
                 <div className='max-w-[1000px] mx-auto p-4 w-full h-full'>
                     <div id="geohexviz" className='mt-36'>

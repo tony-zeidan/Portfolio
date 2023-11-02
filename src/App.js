@@ -13,7 +13,7 @@ function App() {
     return (
         <div>
             <BrowserRouter>
-                <div className="fixed w-screen h-screen z-20 top-0">
+                <div className="fixed w-screen h-screen z-1 top-0">
                 <Snowfall
                 snowflakeCount={25}/>
                     ;
