@@ -16,10 +16,8 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#181818] text-gray-300 z-50'>
-      <div>
-        <h1 className=' font-thin text-2xl italic font-serif'>T.A</h1>
-      </div>
+    <div className='fixed w-full h-[60px] flex justify-between items-center px-4 bg-[#181818] text-gray-300 z-50'>
+      <img src='favicon.ico' className='w-[30px] h-[30px]'/>
       {/* menu */}
       <ul className='hidden md:flex gap-x-8'>
         <li>
