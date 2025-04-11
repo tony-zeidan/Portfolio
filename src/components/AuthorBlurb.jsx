@@ -16,7 +16,7 @@ const AuthorBlurb = () => {
         <p className="text-gray-500 py-4 max-w-md">
           I have 4 years of education at Carleton University in the Software Engineering program,
           and 1.5 years of coop experience at DND and NAV CANADA cumulatively. Currently, I am a developer
-          at Canadian Bank Note Company, Limited. where I help build various web applications.
+          at Canadian Bank Note Company, Limited. where I build web applications for identification systems.
         </p>
         <div>
           <Link
