@@ -1,38 +1,30 @@
 import React from "react";
+import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
-const About = () => { 
+const About = () => {
   return (
-    <div
-      name="about"
-      id="about"
-      className="w-full h-screen bg-[#181818] text-gray-300"
-    >
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className=" py-16 rounded-md bg-[#222222] flex flex-col justify-center items-center w-4/6">
-          <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 mb-4">
-            <div className="sm:text-right pb-8 pl-4">
-              <p className="text-4xl font-bold inline border-b-4 border-cyan-500">
-                About
-              </p>
-            </div>
-            <div></div>
-          </div>
-          <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 rounded-lg">
-            <div className="sm:text-right text-4xl font-bold">
+    <div name="about" id="about" className="w-full bg-[#181818] text-gray-300">
+      <div className="flex flex-col justify-center items-center w-full min-h-screen px-4 py-24">
+        <div className="w-full max-w-[1000px] rounded-xl bg-[#202020] border border-white/[0.07] p-8 sm:p-12 lg:p-16">
+          <Reveal>
+            <SectionHeading index="01" title="About" align="left" />
+          </Reveal>
+          <div className="mt-10 grid gap-8 sm:grid-cols-5">
+            <Reveal className="sm:col-span-2 text-3xl sm:text-4xl font-bold text-white leading-tight">
               <p>
                 Hi. I'm Tony Zeidan.
               </p>
-            </div>
-            <div>
-              <p>
-                {" "}
-                A software developer with experience in both Desktop and Web Applications.
-                I have a special interest in the fields of Machine Learning and Cybersecurity.
-                I am well-knowledged in UI/UX principles and practices. 
-                In addition to software development, I am also a
-                technical writer having published various documents corresponding to my software projects.
+            </Reveal>
+            <Reveal delay={80} className="sm:col-span-3">
+              <p className="leading-relaxed text-gray-400">
+                My focus is backend work in Java and Spring Boot, with Java Vaadin and Angular
+                front ends. That covers payment gateway and third-party API integration,
+                application workflow design, performance tuning, and security remediation. I
+                hold a Bachelor of Engineering in Software from Carleton University. I'm the
+                first author of a peer-reviewed open-source Python package.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
