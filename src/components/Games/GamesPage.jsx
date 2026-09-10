@@ -1,4 +1,3 @@
-import Navbar from "../Navbar";
 import Games from "./Games";
 
 function GamesPage() {
