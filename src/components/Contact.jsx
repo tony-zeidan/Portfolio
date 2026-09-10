@@ -1,25 +1,43 @@
 import React from 'react'
+import { HiOutlineMail } from 'react-icons/hi'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
+
+const elsewhere = [
+  { href: 'https://github.com/tony-zeidan', label: 'github.com/tony-zeidan', icon: <FaGithub size={16} /> },
+  { href: 'https://www.linkedin.com/in/tony-zeidan', label: 'linkedin.com/in/tony-zeidan', icon: <FaLinkedin size={16} /> },
+]
 
 const Contact = () => {
   return (
-    <div id='contact' className='w-full h-screen bg-[#181818] flex justify-center items-center p-4'>
-        <div className='flex flex-col max-w-[600px] w-full'>
-            <div className='pb-8 flex flex-col justify-center w-full h-full items-center'>
-                <p className='text-4xl font-bold inline border-b-4 border-cyan-500 text-gray-300'>Contact</p>
-                <p className='text-gray-300 py-4'>Send me a message</p>
-            </div>
-            {/*
-            <input className='bg-[#ccd6f6] p-2' type="text" placeholder='Name' name='name' />
-            <input className='my-4 p-2 bg-[#ccd6f6]' type="email" placeholder='Email' name='email' />
-            <textarea className='bg-[#ccd6f6] p-2' name="message" rows="10" placeholder='Message'></textarea>
-            <button className='text-white border-2 hover:bg-cyan-500 hover:border-cyan-500 px-4 py-3 my-8 mx-auto flex items-center'>Let's Collaborate</button>
-            */
-            }
-            <a href="mailto: tony.azp25@gmail.com" alt="Gmail">
-            <img className='w-80' src="https://img.shields.io/badge/email-tony.azp25%40gmail.com-informational?style=for-the-badge" />
-            </a>
-            <p className='text-gray-300 py-4'>Email me so we can talk more!</p>
-        </div>
+    <div id='contact' className='w-full bg-[#181818]'>
+      <div className='flex flex-col justify-center items-center w-full min-h-screen px-4 py-24'>
+        <Reveal className='pb-12 w-full flex justify-center'>
+          <SectionHeading index='05' title='Contact' subtitle='Send me a message.' />
+        </Reveal>
+        <Reveal delay={80} className='w-full max-w-[600px] flex flex-col items-center'>
+          <a
+            href='mailto:tony.zeidan@outlook.com'
+            className='group flex w-full items-center justify-center gap-3 rounded-xl bg-[#202020] px-6 py-5 text-gray-200 border border-white/[0.07] hover:border-cyan-500 hover:-translate-y-0.5 transition-[transform,border-color] duration-200 ease-out'
+          >
+            <HiOutlineMail size={22} className='text-cyan-500' />
+            <span className='font-mono text-sm sm:text-base'>tony.zeidan@outlook.com</span>
+          </a>
+          <ul className='mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-2'>
+            {elsewhere.map((item) => (
+              <li key={item.label} className='cursor-auto'>
+                <a
+                  href={item.href}
+                  className='flex items-center gap-2 rounded-md border border-transparent px-3 py-2 font-mono text-sm text-gray-500 hover:text-cyan-500 hover:border-white/10 transition-colors duration-200'
+                >
+                  {item.icon} {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </div>
     </div>
   )
 }
