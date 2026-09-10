@@ -1,60 +1,26 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React from 'react';
 
-function Riddle1(props) {
+function Riddle1() {
+    const code = `#include <stdio.h>
 
-    const [currGuess, setCurrGuess] = useState("");
-
-    const ANSWER = "910190";
-
-    useEffect(
-        () => {
-            props.info("You sat at your desk to find that someone has hacked your computer! " +
-                "You are unsure why anyone would do this but you need to regain access immediately. " +
-                "Thankfully, the hacker has left behind some clues as to the algorithm he used to calculate " +
-                "your new password! Unfortunately the algorithm is bound to some sort of name... " +
-                "Figure out the password.");
-        }, [props.info]
-    )
-
-    useEffect(() => {
-        console.log(props.guessTo);
-        if (props.guessTo === ANSWER) {
-            alert("Success!");
-            props.onAttempt(true);
-            return;
+void computer_password(const char *last_name, char *out) {
+    for (int i = 0, j = 0; last_name[i] != '\\0'; ++i) {
+        if (i % 2 == 0) {
+            out[j++] = last_name[i];
         }
-        props.onAttempt(false);
-        }, [props.guessTo]);
+    }
+}
+
+int main(void) {
+    char answer[8] = {0};
+    computer_password("ZEIDAN", answer);
+    printf("%s", answer);
+}`;
 
     return (
-        <div>
-
-        <pre className='mx-auto border-2 w-full text-sm'><code>{
-            `
-    #include &lt;stdio.h&gt;
-    #include &lt;mallox.h&gt;
-    int* computer_password(char* last_name){
-        for (int i = 0, j = 0; last_name[i] != '\0'; ++i){
-            if (i% 2 == 0){
-                total[j] = last_name[i];
-                j++;
-            }
-        }
-        return total;
-    }
-
-    int main(){
-        int* answer = computer_password(
-            "&copy;&copy;&copy;&copy;&copy;&copy;&copy;&copy;"
-        );
-        for (int i = 0; i &lt; 4; i++){
-            printf("%i", answer[i]);
-        }
-        free(answer);
-    }
-                `}
-        </code></pre>
-        </div>
+        <pre className='mx-auto border-2 w-full text-sm overflow-x-auto p-3'>
+            <code>{code}</code>
+        </pre>
     );
 }
 export default Riddle1;
