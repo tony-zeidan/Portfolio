@@ -1,29 +1,35 @@
 import { Link } from 'react-router-dom'
+import useSpotlight from '../../hooks/useSpotlight'
 
 function Project(props) {
+    const onMouseMove = useSpotlight();
+
     return (
-        <div className="relative group container shadow-lg shadow-[#040c16] bg-cover rounded-md flex justify-center items-center mx-auto overflow-hidden">
+        <Link
+            to={props.link}
+            onMouseMove={onMouseMove}
+            className="spotlight group relative block aspect-[4/3] w-full overflow-hidden rounded-xl border border-white/[0.07] shadow-lg shadow-[#040c16] hover:border-cyan-500/40 hover:-translate-y-0.5 transition-[transform,border-color] duration-200 ease-out"
+        >
             <div
-                className="absolute inset-0 bg-cover bg-center transition-opacity duration-300"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-out group-hover:scale-[1.02]"
                 style={{ backgroundImage: `url(${props.imgUrl})` }}
-            ></div>
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/25 transition-opacity duration-300 group-hover:opacity-100 opacity-90" />
 
-            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-60 transition-opacity duration-300"></div>
-
-            <div className="relative opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white text-center transition-opacity duration-300 gap-4 p-4">
-                <span className="text-lg font-bold tracking-wider">
-                    {props.projectTitle}
+            <div className="relative flex h-full flex-col justify-end p-4">
+                <p className="text-sm text-gray-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 transition-[opacity,transform] duration-300 ease-out">
+                    {props.projectDescription}
+                </p>
+                <span className="mt-3 flex items-center justify-between gap-2">
+                    <span className="text-lg font-bold tracking-wide text-white">
+                        {props.projectTitle}
+                    </span>
+                    <span className="font-mono text-xs text-cyan-400 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-200">
+                        See more
+                    </span>
                 </span>
-                <p>{props.projectDescription}</p>
-                {props.link && (
-                    <Link to={props.link}>
-                        <button className="rounded-lg px-4 py-3 bg-white text-gray-700 font-bold text-lg">
-                            See More
-                        </button>
-                    </Link>
-                )}
             </div>
-        </div>
+        </Link>
     );
 }
 

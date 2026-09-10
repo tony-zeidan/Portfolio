@@ -2,32 +2,33 @@ import React, {useEffect} from 'react'
 import {useLocation} from "react-router-dom";
 
 import {FaGithub, FaJournalWhills} from "react-icons/fa";
-import Navbar from "../Navbar";
+import {prefersReducedMotion} from "../../hooks/useReveal";
 
 const ProjectsPage = () => {
     const location = useLocation()
     useEffect(() => {
+        const behavior = prefersReducedMotion() ? "auto" : "smooth"
         if (location.hash) {
             let elem = document.getElementById(location.hash.slice(1))
             if (elem) {
-                elem.scrollIntoView({behavior: "smooth"})
+                elem.scrollIntoView({behavior})
             }
         } else {
-            window.scrollTo({top: 0, left: 0, behavior: "smooth"})
+            window.scrollTo({top: 0, left: 0, behavior})
         }
     }, [location,])
 
     return (
         <div>
-            <Navbar/>
             <div id='projects' className='w-full h-full text-gray-300 flex-nowrap bg-[#181818]'>
 
                 <div className='max-w-[1000px] mx-auto p-4 w-full h-full'>
                     <div id="geohexviz" className='mt-36'>
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 GeoHexViz
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5 flex flex-row'>
                             <a className='mr-10' href="https://github.com/mrempel/geohexviz">
@@ -61,30 +62,40 @@ const ProjectsPage = () => {
                     </div>
                     <div id="evase">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Evase
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
-                        <div className='mb-5'>
-                            <a href="https://github.com/Bruce-liushaopeng/Evase">
+                        <div className='mb-5 flex flex-row'>
+                            <a className='mr-10 flex items-center gap-2' href="https://github.com/Bruce-liushaopeng/Evase">
                                 <FaGithub size={30}/>
+                                Evase
                             </a>
-                            <p className='mt-2'>This project is my Carleton University capstone project.</p>
+                            <a className='mr-10 flex items-center gap-2' href="https://github.com/tony-zeidan/EvaseAnalysis">
+                                <FaGithub size={30}/>
+                                EvaseAnalysis
+                            </a>
                         </div>
+                        <p className='mt-2 mb-5'>Capstone, team lead. Python Flask, React, 2022 to 2023.</p>
                         <div
                             style={{backgroundImage: `url(/images/evase.png)`}}
                             className='shadow-lg shadow-[#040c16] group container w-96 h-96 bg-contain rounded-md  flex justify-center items-center mx-auto'
                         />
                         <div className='mb-5 mt-5'>
-                            <p>It is often the case that security is an afterthought in development. The Evase project is a web application that takes in backend Python code and analyzes it for vulnerabilities; most notably SQL injection vulnerabilities.</p>
-                            <p>This project helped me refine my knowledge of cybersecurity concepts, the ReactJS front-end framework, and the Flask back-end framework. </p>
+                            <p>EVASE is a web application that scans Python source for SQL injection
+                                vulnerabilities using abstract syntax trees. I wrote components of the detection
+                                algorithm, the Flask backend, the React front end, and the scheme for storing and
+                                purging client code on the server.</p>
+                            <p>The detection engine is published separately as EvaseAnalysis.</p>
                         </div>
                     </div>
                     <div id="fakeamazonbookstore">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Fake Amazon Bookstore
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5'>
                             <a href="https://github.com/tony-zeidan/fake-amazon-bookstore">
@@ -102,9 +113,10 @@ const ProjectsPage = () => {
                     </div>
                     <div id="sapphirebot">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Sapphire Bot
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5'>
                             <a href="https://github.com/tony-zeidan/SapphireBot">
@@ -124,9 +136,10 @@ const ProjectsPage = () => {
                     </div>
                     <div id="elevatorsystem">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Elevator Control System
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5'>
                             <a href="https://github.com/tony-zeidan/SYSC3303_elevator_project">
@@ -148,9 +161,10 @@ const ProjectsPage = () => {
                     </div>
                     <div id="rubybot">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Ruby Bot
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5'>
                             <a href="https://github.com/tony-zeidan/RubyBot">
@@ -169,9 +183,10 @@ const ProjectsPage = () => {
                     </div>
                     <div id="riskgame">
                         <div className='pb-8 w-full'>
-                            <p className='text-5xl text-start font-bold border-b-4 text-gray-300 border-cyan-500'>
+                            <p className='text-4xl sm:text-5xl font-bold text-white'>
                                 Risk Game
                             </p>
+                            <div className='accent-rule h-[3px] w-16 rounded-full mt-4' />
                         </div>
                         <div className='mb-5'>
                             <a href="https://github.com/tony-zeidan/DreamTeam-Risk-SYSC3110">
