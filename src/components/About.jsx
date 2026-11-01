@@ -26,11 +26,11 @@ const About = () => {
             <div>
               <p>
                 {" "}
-                A software developer with experience in both Desktop and Web Applications.
-                I have a special interest in the fields of Machine Learning and Cybersecurity.
-                I am well-knowledged in UI/UX principles and practices. 
-                In addition to software development, I am also a
-                technical writer having published various documents corresponding to my software projects.
+                A Secret-cleared software developer with a backend focus in Java and Spring Boot,
+                working with Java Vaadin and Angular front ends. My work covers payment gateway and
+                third-party API integration, application workflow design, performance tuning, and
+                security remediation. I am also the first author of GeoHexViz, a peer-reviewed
+                open-source Python package published in the Journal of Open Source Software.
               </p>
             </div>
           </div>
